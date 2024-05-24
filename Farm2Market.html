@@ -1,1 +1,82 @@
 
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmers Market</title>
+   
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="menu-icon" onclick="toggleNav()">&#9776;</div>
+            <div class="logo">
+                <img src="path/to/your/logo.png" alt="Farmers Market Logo">
+            </div>
+            <div class="signup-btns">
+                <a href="#signup-farmer" class="signup-btn"><i class="fas fa-user-plus"></i> Sign Up as Farmer</a>
+                <a href="#signup-market" class="signup-btn"><i class="fas fa-store-alt"></i> Sign Up as Market</a>
+            </div>
+        </nav>
+        <div class="slide-menu">
+            <a href="#home">HOME</a>
+            <a href="#about">ABOUT US</a>
+            <a href="#contact">CONTACT US</a>
+            <a href="#complaint">COMPLAINT</a>
+            <a href="#help">HELP</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="main-content">
+            <section id="home">
+                <h2>Welcome to Farmers Market</h2>
+                <p>This is a platform for farmers and markets to connect.</p>
+            </section>
+
+            <section id="about">
+                <h2>About Us</h2>
+                <p>We are dedicated to bridging the gap between farmers and markets.</p>
+            </section>
+
+            <!-- Sign Up/Log In Forms -->
+            <section id="signup-farmer" style="display: none;">
+                <h2>Sign Up as Farmer</h2>
+                <form id="farmerForm" class="active" action="#" method="post">
+                    <!-- Farmer sign-up form fields -->
+                    <input type="text" name="fullName" placeholder="Full Name" required>
+                    <input type="email" name="email" placeholder="Email Address" required>
+                    <input type="tel" name="phoneNumber" placeholder="Phone Number" required>
+                    <input type="number" name="acres" placeholder="No. of Acres" required>
+                    <input type="text" name="Address" placeholder="Address" required>
+                    <input type="password" name="password" placeholder="Password" required>
+                    <input type="password" name="confirmPassword" placeholder="Confirm Password" required>
+                    <label><input type="checkbox" name="terms" required> I agree to the Terms and Conditions</label>
+                    <button type="button" onclick="showInventory()">Next</button>
+                </form>
+                <p>Already have an account? <a href="login.html">Log In here</a>.</p>
+            </section>
+
+            <section id="signup-market" style="display: none;">
+                <h2>Sign Up as Market</h2>
+                <form id="marketForm" action="#" method="post">
+                    <!-- Market sign-up form fields -->
+                    <input type="text" id="fullNameMarket" name="fullName" placeholder="Full Name" required><br>
+                    <input type="email" id="emailMarket" name="email" placeholder="Email Address" required><br>
+                    <input type="password" id="passwordMarket" name="password" placeholder="Password" required><br>
+                    <input type="password" id="confirmPasswordMarket" name="confirmPassword" placeholder="Confirm Password" required><br>
+                    <input type="text" id="marketName" name="marketName" placeholder="Market Name" required><br>
+                    <input type="text" id="licenseId" name="licenseId" placeholder="License ID" required><br>
+                    <input type="text" id="address" name="address" placeholder="Address" required><br>
+                    <input type="tel" id="phoneNumberMarket" name="phoneNumber" placeholder="Phone Number" required><br>
+                    <label><input type="checkbox" name="terms" required> I agree to the Terms and Conditions</label><br>
+                    <input type="submit" value="Sign Up">
+                </form>
+                <p>Already have an account? <a href="login.html">Log In here</a>.</p>
+            </section>
+
+            <div id="alertMessage" class="alert" style="display: none;"></div>
+        </div>
+    </div>
